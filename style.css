@@ -1,0 +1,101 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Secular+One&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(221,221,221,255);
+}
+
+.container{
+    font-family: 'Secular One', sans-serif;
+    display: grid;
+    height: 60vh;
+    width: 30vw;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6,80px);
+    margin: 0 auto;
+    align-content: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #FFF;
+}
+
+div{
+    height: 20px;
+}
+
+input{
+    height: 50px;
+    width: 100%;
+    border:0;
+    background-color: rgba(239,239,239,255);
+    padding-left: 10px;
+    outline: none;
+}
+
+.email{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.titulo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    font-size: 1.4em;
+}
+
+
+.email input{
+    width: 100%;
+}
+
+button{
+    height: 50px;
+    width: 100%;
+    color:#FFF;
+    background-color: rgba(5,150,105,255);
+    text-align: left;
+    padding-left: 10px;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;
+}
+
+.main{
+    height: 60vh;
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.container_uno{
+    display: flex;
+    height: 60vh;
+    width: 30vw;
+    background-color: rgba(5,150,105,255);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #FFF;
+    padding:0 20px;
+font-family: 'Secular One', sans-serif;
+}
+
+.container_uno h1{
+    margin-bottom: 20px;
+}
