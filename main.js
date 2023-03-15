@@ -19,21 +19,54 @@ const regexApellido =/^[a-z][a-z áéúíó ñ]{2,24}$/gi
 
 const regexFecha =/^\d\d\/\d\d\/\d{4}$/g
 
+let control = false
 
 registrar.addEventListener('click',()=>{
+
     if(regexNombre.test(nombre.value)){
+        if(regexApellido.test(apellido.value)){
+           if(regexTelefono.test(telefono.value)){
+            if(regexFecha.test(fecha.value)){
+                if(regexEmail.test(email.value)){
+                    if(contraseña.value != '' && contraseña.value == repetir_contraseña.value){
+                        alert("Registro exitoso")
+                        nombre.value = ''
+                        apellido.value = ''
+                        fecha.value = ''
+                        email.value = ''
+                        contraseña.value = ''
+                        repetir_contraseña.value = ''
+                        telefono.value = ''
+                    }
+                }
+            }
+           }
+        }
+    }else{
+        alert('Datos invalidos')
+    }
+
+
+
+    if(regexNombre.test(nombre.value)){
+        
+    }else{
+        console.log("Nombre invalido")
+    }
+
+/*     if(regexNombre.test(nombre.value)){
         console.log("Nombre Correcto")
     }else{
         console.log("Nombre inCorrecto")
     }
     if(regexApellido.test(apellido.value)){
-        console.log("Apellido Correcto")
+        console.log("Apellido correcto")
     }else{
         console.log("Apellido inCorrecto")
     }
 
     if(regexTelefono.test(telefono.value)){
-        console.log("Telefono Correcto")
+        console.log("Telefono correcto")
     }else{
         console.log("Telefono inCorrecto")
     }
@@ -44,19 +77,32 @@ registrar.addEventListener('click',()=>{
     }
 
     if(regexEmail.test(email.value)){
-        console.log("Email correcto")
+        console.log("Email Correcto")
     }else{
         console.log("Email inCorrecto")
     }
 
     if(contraseña.value != '' && contraseña.value == repetir_contraseña.value){
-        console.log("Registro exitoso")
+        console.log("Registro Correcto")
     }else{
         console.log("Registro inCorrecto")
-    }
+    } */
 })
 
 
+
+
+
+
+cancelar.addEventListener('click',()=>{
+    nombre.value = ''
+    apellido.value = ''
+    fecha.value = ''
+    email.value = ''
+    contraseña.value = ''
+    repetir_contraseña.value = ''
+    telefono.value = ''
+})
 
  /*
  \d– dígitos.
